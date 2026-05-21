@@ -1,0 +1,108 @@
+/* =========================
+   ROOT VARIAVÉIS
+========================= */
+:root {
+    --bg-color: #0C042F;
+    --secondary-bg: #0B1026;
+    
+    --main-color: #7C3AED;
+    --secondary-color: #3B82F6;
+
+    --text-color: #FFFFFF;
+    --text-secondary: #CBD5E1;
+
+    --border-color: rgba(255, 255, 255, 0.1);
+
+    --transition: 0.3s ease;
+}
+
+/* =========================
+   FONTS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* Formatando css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.5rem 10%;
+
+    background: var(--bg-color);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    position: relative;
+
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.navbar a:hover {
+    color: #8B5CF6;
+
+    text-shadow:
+        0 0 5px #8B5CF6,
+        0 0 10px #8B5CF6,
+        0 0 20px #8B5CF6;
+}
+
+.navbar a.active {
+    color: var(--secondary-color);
+}
+
+
+/* =========================
+   HOME SECTION
+========================= */
+
