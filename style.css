@@ -1,6 +1,7 @@
 /* =========================
    ROOT VARIAVÉIS
 ========================= */
+
 :root {
     --bg-color: #0C042F;
     --secondary-bg: #0B1026;
@@ -19,9 +20,14 @@
 /* =========================
    FONTS
 ========================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
-/* Formatando css */
+
+/* =========================
+   FORATANDO CSS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -32,10 +38,18 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
 /* =========================
    HEADER
 ========================= */
-header {
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -48,8 +62,9 @@ header {
 
     padding: 1.5rem 10%;
 
-    background: var(--bg-color);
-    backdrop-filter: blur(10px);
+  background: rgba(12, 4, 47, 0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
 
     z-index: 1000;
 }
@@ -57,12 +72,26 @@ header {
 /* =========================
    LOGO
 ========================= */
+
 .logo {
     font-size: 2rem;
     font-weight: 700;
 
-    color: var(--text-color);
     text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #3B82F6,
+        #7C3AED,
+        #C084FC
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(
+        0 0 10px rgba(124, 58, 237, 0.5)
+    );
 }
 
 
@@ -101,8 +130,236 @@ header {
     color: var(--secondary-color);
 }
 
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #3B82F6,
+        #8B5CF6
+    );
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
 
 /* =========================
    HOME SECTION
 ========================= */
+section {
+    min-height: 100vh;
+    background:
+    radial-gradient(circle at top, #1a0b45, #050816 70%);
+    padding: 10rem 10%;
+}
 
+.home-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        flex-wrap: wrap;
+        min-height: 80vh;
+        padding-top: 4rem;
+      }
+
+      .container-text {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .container-text span {
+        color: var(--main-color);
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      .container-text h1 {
+        font-size: 72px;
+        line-height: 1.1;
+        margin: 10px 0;
+      }
+
+      .container-text h2 {
+        font-size: 50px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .container-text h2 strong {
+        color: #4d7cff;
+      }
+
+      .container-text p {
+        max-width: 550px;
+        color: #cfcfcf;
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 35px;
+      }
+
+      /* BUTTONS */
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+      }
+
+      .btn {
+        padding: 16px 28px;
+        border-radius: 14px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, #a855f7, #3b82f6);
+        color: white;
+        box-shadow: 0 0 25px rgba(118, 74, 241, 0.4);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      /* SKILLS */
+
+      .skills {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .skill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .skill i {
+        font-size: 20px;
+      }
+
+      .fa-react {
+        color: #61dafb;
+      }
+
+      .fa-js {
+        color: #f7df1e;
+      }
+
+      .fa-figma {
+        color: #ff4d89;
+      }
+
+      /* IMAGE */
+
+      .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        min-width: 300px;
+      }
+
+      .circle {
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #5b4dff, #2d7cff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        box-shadow:
+          0 0 40px rgba(98, 0, 255, 0.5),
+          0 0 90px rgba(98, 0, 255, 0.3);
+      }
+
+      .circle::before {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        border: 2px solid rgba(153, 0, 255, 0.3);
+      }
+
+      .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .circle::after {
+        content: "";
+
+        position: absolute;
+        inset: -12px;
+
+        border-radius: 50%;
+
+        border: 2px solid rgb(255, 255, 255, 0.8, green, blue);
+
+        animation: pulse 4s infinite;
+      }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.03);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.btn,
+.skill,
+.navbar a {
+    transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
