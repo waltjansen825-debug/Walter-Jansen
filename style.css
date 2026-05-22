@@ -292,6 +292,8 @@ section {
   box-shadow:
     0 0 40px rgba(98, 0, 255, 0.5),
     0 0 90px rgba(98, 0, 255, 0.3);
+
+    max-width: 100%;
 }
 
 .circle::before {
@@ -1277,8 +1279,14 @@ section {
     flex-wrap: wrap;
   }
 
-  .hero-image .circle img {
+  .circle  {
     width: 320px;
+    height: 320px;
+  }
+
+  .circle::before {
+    width: 350px;
+    height: 350px;
   }
 
   /* ABOUT */
@@ -1344,8 +1352,20 @@ section {
     font-size: .95rem;
   }
 
-  .hero-image .circle img {
-    width: 250px;
+  .circle {
+    width: 240px;
+    height: 240px;
+  }
+
+  .circle::before {
+    width: 270px;
+    height: 270px;
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .buttons {
