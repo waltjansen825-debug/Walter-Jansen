@@ -362,21 +362,31 @@
     <div class="contact-left">
       <h2>Contate-me</h2>
 
-      <form>
+      <form action="https://formsubmit.co/walterjansen825@gmail.com" method="POST">
         <div class="input-box">
           <i class="bx bx-user"></i>
-          <input type="text" placeholder="Nome" />
+          <input type="text" name="nome" placeholder="Nome" required/>
         </div>
 
         <div class="input-box">
           <i class="bx bx-envelope"></i>
-          <input type="email" placeholder="Email" />
+          <input type="email" name="email" placeholder="Email" required/>
         </div>
 
         <div class="input-box textarea-box">
           <i class="bx bx-message-square-detail"></i>
-          <textarea placeholder="Mensagem"></textarea>
+          <textarea name="mensagem" placeholder="Mensagem" required></textarea>
         </div>
+
+        <input
+          type="hidden"
+          name="_next"
+          value="https://waltjansen825-debug.github.io/Walter-Jansen/obrigado.html"/>
+
+        <input
+           type="hidden"
+           name="_captcha"
+           value="false"/>
 
         <button type="submit" class="btn-contact">
           <i class="bx bx-send"></i>
