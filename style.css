@@ -1189,4 +1189,185 @@ section {
   }
 }
 
-/*  */
+/* responsividade */
+
+/* ========================= */
+/* MENU HAMBURGUER */
+/* ========================= */
+
+.menu-mobile {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ESCONDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 991px) {
+
+  .header {
+    padding: 20px 5%;
+    position: relative;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: rgba(5, 8, 22, 0.98);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 30px;
+    transition: .4s ease;
+    border-left: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .navbar a {
+    font-size: 1.1rem;
+  }
+
+  /* ABRIR MENU */
+
+  #menu-toggle:checked ~ .navbar {
+    right: 0;
+  }
+
+  /* HOME */
+
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px;
+    padding: 120px 5% 80px;
+  }
+
+  .container-text h1 {
+    font-size: 3rem;
+  }
+
+  .container-text h2 {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .skills {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image .circle img {
+    width: 320px;
+  }
+
+  /* ABOUT */
+
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  /* PORTFOLIO */
+
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* SERVICES */
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* SKILLS */
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CONTACT */
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .container-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .container-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .container-text p {
+    font-size: .95rem;
+  }
+
+  .hero-image .circle img {
+    width: 250px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    text-align: center;
+  }
+}
